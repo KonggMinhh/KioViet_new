@@ -1,0 +1,39 @@
+%icon-action-color {
+    color: $icon-action-color;
+}
+%icon-mask-color {
+    color: $icon-mask-color;
+}
+
+%disabled-color {
+    color: $disabled-color;
+}
+
+//----- Text-colors ------------------------------------
+@each $color, $value in $theme-colors {
+    %color-#{$color},
+    .#{$class-prefix}color-#{$color} {
+        color: var(--#{$var-prefix}#{$color}) !important;
+    }
+}
+//----- Bg-colors --------------------------------------
+@each $color, $value in $theme-colors {
+    %bg-#{$color},
+    .#{$class-prefix}bg-#{$color} {
+        background-color: var(--#{$var-prefix}#{$color}) !important;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    %bg-light-#{$color}-50,
+    .#{$class-prefix}bg-light-#{$color}-50 {
+        background-color: var(--#{$var-prefix}#{$color}-50) !important;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    %bg-light-#{$color}-25,
+    .#{$class-prefix}bg-light-#{$color}-25 {
+        background-color: var(--#{$var-prefix}#{$color}-25) !important;
+    }
+}

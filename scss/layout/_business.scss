@@ -1,0 +1,14 @@
+.business {
+    background: linear-gradient(24.91deg, #eff6ff 18.37%, #ffffff 86.66%);
+    border-radius: 0px 0px 150px 150px;
+    padding: 3.6rem 0 9.4rem 0;
+    &-cta {
+        margin-top: 9.2rem;
+    }
+    &-inner {
+        @include border-radius(var(--#{$var-prefix}radius-circle));
+    }
+    &-text {
+        padding: 0 3.2rem;
+    }
+} 

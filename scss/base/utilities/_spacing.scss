@@ -1,0 +1,38 @@
+%#{$class-prefix}spacer,
+.#{$class-prefix}spacer {
+    --#{$var-prefix}spacer-gap: var(--#{$var-prefix}spacer-md);
+    gap: var(--#{$var-prefix}spacer-gap);
+    display: inline-flex;
+    flex-wrap: nowrap;
+    &-vertical {
+        flex-direction: column;
+    }
+    @each $spacer, $value in $spacers {
+        &-#{$spacer} {
+            --#{$var-prefix}spacer-gap: var(--#{$var-prefix}spacer-#{$spacer});
+        }
+    }
+}
+
+%#{$class-prefix}gap,
+.#{$class-prefix}gap {
+    --#{$var-prefix}gap: var(--#{$var-prefix}spacer-md);
+    gap: var(--#{$var-prefix}spacer-gap);
+
+    @each $spacer, $value in $spacers {
+        &-#{$spacer} {
+            --#{$var-prefix}gap: var(--#{$var-prefix}spacer-#{$spacer});
+        }
+    }
+}
+
+// Card Gap
+
+%#{$class-prefix}card-gap,
+.#{$class-prefix}card-gap {
+    @each $spacer, $value in $gaps {
+        &-#{$spacer} {
+            --#{$var-prefix}card-gap: var(--#{$var-prefix}card-gap-#{$spacer}) !important;
+        }
+    }
+}

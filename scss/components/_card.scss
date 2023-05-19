@@ -1,0 +1,429 @@
+// ======== Card Virtual Class ============
+%card {
+    --#{$var-prefix}card-padding-x: #{$card-padding-x};
+    --#{$var-prefix}card-padding-y: #{$card-padding-y};
+
+    --#{$var-prefix}card-margin-x: #{$card-margin-x};
+    --#{$var-prefix}card-margin-y: #{$card-margin-y};
+
+    --#{$var-prefix}card-font-size: #{$card-font-size};
+    --#{$var-prefix}card-line-height: #{$card-line-height};
+    --#{$var-prefix}card-font-weight: #{$card-font-weight};
+
+    --#{$var-prefix}card-color: #{$card-color};
+    --#{$var-prefix}card-hover-bg: #{$card-hover-bg};
+    --#{$var-prefix}card-bg: #{$card-bg};
+
+    --#{$var-prefix}card-flex: #{$card-flex};
+    --#{$var-prefix}card-align: #{$card-align};
+    --#{$var-prefix}card-justify: #{$card-justify};
+    --#{$var-prefix}card-gap: #{$card-gap};
+
+    --#{$var-prefix}card-border-width: #{$card-border-width};
+    --#{$var-prefix}card-border-color: transparent;
+    --#{$var-prefix}card-border-radius: #{$card-border-radius};
+    --#{$var-prefix}card-box-shadow: #{$card-box-shadow-property} rgb(0, 41, 87, #{$card-box-shadow-opacity});
+
+    position: relative;
+    display: flex;
+    flex: 1;
+    gap: var(--#{$var-prefix}card-gap);
+    justify-content: var(--#{$var-prefix}card-justify);
+    align-items: var(--#{$var-prefix}card-align);
+    flex-direction: var(--#{$var-prefix}card-flex);
+    padding: var(--#{$var-prefix}card-padding-y)
+        var(--#{$var-prefix}card-padding-x);
+    margin: var(--#{$var-prefix}card-margin-y)
+        var(--#{$var-prefix}card-margin-x);
+    font-size: var(--#{$var-prefix}card-font-size);
+    font-family: var(--#{$var-prefix}body-font-family);
+    line-height: var(--#{$var-prefix}card-line-height);
+    font-weight: var(--#{$var-prefix}card-font-weight);
+    color: var(--#{$var-prefix}card-color);
+    user-select: none;
+    background-color: var(--#{$var-prefix}card-bg);
+    border: var(--#{$var-prefix}card-border-width) solid
+        var(--#{$var-prefix}card-border-color);
+    @include border-radius(var(--#{$var-prefix}card-border-radius));
+}
+
+%card-xs {
+    @include card-size(
+        $card-padding-y-xs,
+        $card-padding-x-xs,
+        $card-font-size-xs,
+        $card-line-height-xs,
+        $card-font-weight,
+        $card-border-radius
+    );
+}
+%card-sm {
+    @include card-size(
+        $card-padding-y-sm,
+        $card-padding-x-sm,
+        $card-font-size-sm,
+        $card-line-height-sm,
+        $card-font-weight,
+        $card-border-radius
+    );
+}
+%card-xl {
+    @include card-size(
+        $card-padding-y-xl,
+        $card-padding-x-xl,
+        $card-font-size-xl,
+        $card-line-height-xl,
+        $card-font-weight,
+        $card-border-radius
+    );
+}
+%card-md {
+    @include card-size(
+        $card-padding-y-md,
+        $card-padding-x-md,
+        $card-font-size-md,
+        $card-line-height-md,
+        $card-font-weight,
+        $card-border-radius
+    );
+}
+%card-lg {
+    @include card-size(
+        $card-padding-y-lg,
+        $card-padding-x-lg,
+        $card-font-size-lg,
+        $card-line-height-lg,
+        $card-font-weight,
+        $card-border-radius
+    );
+}
+%card-xxl {
+    @include card-size(
+        $card-padding-y-xxl,
+        $card-padding-x-xxl,
+        $card-font-size-xxl,
+        $card-line-height-xxl,
+        $card-font-weight,
+        $card-border-radius-xxl
+    );
+}
+%card-flex-center {
+    --#{$var-prefix}card-align: #{$card-align-center};
+    --#{$var-prefix}card-justify: #{$card-justify-center};
+}
+%card-align-center {
+    --#{$var-prefix}card-align: #{$card-align-center};
+}
+%card-horizontal {
+    @include media-breakpoint-up(lg) {
+        --#{$var-prefix}card-flex: #{$card-flex-row};
+    }
+}
+%card-horizontal-wrapper {
+    --#{$var-prefix}card-flex: #{$card-flex-row};
+}
+%card-shadow {
+    --#{$var-prefix}card-bg: #{$white};
+    box-shadow: var(--#{$var-prefix}card-box-shadow);
+}
+%card-img {
+    --#{$var-prefix}card-img-width: #{$card-img-width};
+    --#{$var-prefix}card-img-height: #{$card-img-height};
+    --#{$var-prefix}card-border-radius: #{$card-border-radius-none};
+
+    width: var(--#{$var-prefix}card-img-width);
+    height: var(--#{$var-prefix}card-img-height);
+    display: flex;
+    object-fit: cover;
+    @include border-radius(var(--#{$var-prefix}card-border-radius));
+}
+%card-img-circle {
+    --#{$var-prefix}card-border-radius: #{$card-border-radius-md};
+}
+%card-img-xs {
+    --#{$var-prefix}card-img-width: #{$card-img-width-xs};
+    --#{$var-prefix}card-img-height: #{$card-img-height-xs};
+}
+%card-img-sm {
+    --#{$var-prefix}card-img-width: #{$card-img-width-sm};
+}
+%card-img-md {
+    --#{$var-prefix}card-img-width: #{$card-img-width-md};
+    --#{$var-prefix}card-img-height: #{$card-img-height-md};
+}
+%card-img-lg {
+    --#{$var-prefix}card-img-width: #{$card-img-width-lg};
+    --#{$var-prefix}card-img-height: #{$card-img-height-lg};
+}
+%card-img-xl {
+    --#{$var-prefix}card-img-width: #{$card-img-width-xl};
+    --#{$var-prefix}card-img-height: #{$card-img-height-xl};
+}
+%card-reverse {
+    @include media-breakpoint-up(lg) {
+        --#{$var-prefix}card-flex: #{$card-flex-row-reverse};
+    }
+}
+%card-body {
+    --#{$var-prefix}card-font-size: #{$card-font-size};
+    --#{$var-prefix}card-margin-y: #{$card-margin-y};
+    --#{$var-prefix}card-margin-x: #{$card-margin-x};
+    --#{$var-prefix}card-color: #{$card-color};
+
+    font-size: var(--#{$var-prefix}card-font-size);
+    color: var(--#{$var-prefix}card-color);
+    margin: var(--#{$var-prefix}card-margin-y)
+        var(--#{$var-prefix}card-margin-x);
+}
+%card-title {
+    --#{$var-prefix}card-color: #{$card-color};
+    --#{$var-prefix}card-margin-y: #{$card-margin-y};
+    --#{$var-prefix}card-margin-x: #{$card-margin-x};
+    --#{$var-prefix}card-font-weight: #{$card-font-weight-semibold};
+
+    color: var(--#{$var-prefix}card-color);
+    font-weight: var(--#{$var-prefix}card-font-weight);
+    margin-top: var(--#{$var-prefix}card-margin-y);
+    margin-bottom: var(--#{$var-prefix}card-margin-y);
+    margin-left: var(--#{$var-prefix}card-margin-x);
+    margin-right: var(--#{$var-prefix}card-margin-x);
+    @include line-clamp(3);
+}
+%card-title-gray {
+    --#{$var-prefix}card-font-weight: #{$font-weight-semibold};
+    --#{$var-prefix}card-color: var(--#{$var-prefix}gray-700);
+    --#{$var-prefix}card-font-size: #{$card-font-size-sm};
+    font-size: var(--#{$var-prefix}card-font-size);
+}
+%card-title-xs {
+    margin-bottom: #{$card-margin-y-xs};
+}
+%card-title-sm {
+    margin-bottom: #{$card-margin-y-sm};
+}
+%card-title-top-sm {
+    margin-top: #{$card-margin-y-sm};
+}
+%card-title-top-lg {
+    margin-top: #{$card-margin-y-lg};
+}
+%card-title-top-xl {
+    margin-top: #{$card-margin-y-xl};
+}
+%card-text {
+    --#{$var-prefix}card-color: #{$card-color};
+    --#{$var-prefix}card-text: #{$card-text-normal};
+    --#{$var-prefix}card-font-size: #{$card-font-size-xs};
+    --#{$var-prefix}card-font-weight: #{$card-font-weight};
+    --#{$var-prefix}card-margin-y: #{$card-margin-y};
+    --#{$var-prefix}card-margin-x: #{$card-margin-x};
+    --#{$var-prefix}card-line-height: #{$card-line-height-xl};
+
+    color: var(--#{$var-prefix}card-color);
+    text-align: var(--#{$var-prefix}card-text);
+    margin: var(--#{$var-prefix}card-margin-y)
+        var(--#{$var-prefix}card-margin-x);
+    font-size: var(--#{$var-prefix}card-font-size);
+    line-height: var(--#{$var-prefix}card-line-height);
+    font-weight: var(--#{$var-prefix}card-font-weight);
+    @include line-clamp(5);
+}
+%card-text-gray {
+    --#{$var-prefix}card-color: var(--#{$var-prefix}gray-600);
+}
+%card-text-sm {
+    margin-top: #{$card-margin-y-sm};
+    margin-bottom: #{$card-margin-y-sm};
+}
+%card-text-xxl {
+    margin-bottom: #{$card-margin-y-xxl};
+}
+%card-desc {
+    --#{$var-prefix}card-margin-y: #{$card-margin-y};
+    --#{$var-prefix}card-margin-x: #{$card-margin-x};
+    --#{$var-prefix}card-color: #{$card-color};
+    --#{$var-prefix}card-font-size: #{$card-font-size-xs};
+    --#{$var-prefix}card-font-weight: #{$card-font-weight};
+
+    color: var(--#{$var-prefix}card-color);
+    margin: var(--#{$var-prefix}card-margin-y)
+        var(--#{$var-prefix}card-margin-x);
+    font-size: var(--#{$var-prefix}card-font-size);
+    font-weight: var(--#{$var-prefix}card-font-weight);
+    @include line-clamp(2);
+}
+%card-desc-xs {
+    margin-top: #{$card-margin-y-xxs};
+}
+%card-desc-top-sm {
+    margin-top: #{$card-margin-y-sm};
+}
+%card-sub-title {
+    --#{$var-prefix}card-font-size: #{$card-font-size-xs};
+    --#{$var-prefix}card-font-weight: #{$card-font-weight};
+    --#{$var-prefix}card-color: var(--#{$var-prefix}gray-700);
+    --#{$var-prefix}card-line-height: #{$card-line-height};
+
+    color: var(--#{$var-prefix}card-color);
+    font-size: var(--#{$var-prefix}card-font-size);
+    line-height: var(--#{$var-prefix}card-line-height);
+    font-weight: var(--#{$var-prefix}card-font-weight);
+    @include line-clamp(4);
+}
+%card-sub-title-xs {
+    margin-bottom: #{$card-margin-y-xs};
+}
+%card-hover {
+    &:hover {
+        --#{$var-prefix}card-hover-bg: #{$card-hover-bg};
+        --#{$var-prefix}card-box-shadow: #{$card-box-shadow-property} rgb(0, 41, 87, #{$card-box-shadow-opacity});
+        background-color: var(--#{$var-prefix}card-hover-bg);
+        box-shadow: var(--#{$var-prefix}card-box-shadow);
+    }
+}
+//===== Card Class ===================================
+.#{$class-prefix}card {
+    @extend %card;
+}
+.#{$class-prefix}card-shadow {
+    @extend %card-shadow;
+}
+.#{$class-prefix}card-flex-center {
+    @extend %card-flex-center;
+}
+.#{$class-prefix}card-align-center {
+    @extend %card-align-center;
+}
+.#{$class-prefix}card-horizontal {
+    @extend %card-horizontal;
+}
+.#{$class-prefix}card-horizontal-wrapper {
+    @extend %card-horizontal-wrapper;
+}
+.#{$class-prefix}card-reverse {
+    @extend %card-reverse;
+}
+.#{$class-prefix}card-img {
+    @extend %card-img;
+}
+.#{$class-prefix}card-img-circle {
+    @extend %card-img-circle;
+}
+.#{$class-prefix}card-img-xs {
+    @extend %card-img-xs;
+}
+.#{$class-prefix}card-img-sm {
+    @extend %card-img-sm;
+}
+.#{$class-prefix}card-img-md {
+    @extend %card-img-md;
+}
+.#{$class-prefix}card-img-lg {
+    @extend %card-img-lg;
+}
+.#{$class-prefix}card-img-xl {
+    @extend %card-img-xl;
+}
+.#{$class-prefix}card-body {
+    @extend %card-body;
+}
+.#{$class-prefix}card-title {
+    @extend %card-title;
+}
+.#{$class-prefix}card-title-gray {
+    @extend %card-title-gray;
+}
+.#{$class-prefix}card-title-xs {
+    @extend %card-title-xs;
+}
+.#{$class-prefix}card-title-sm {
+    @extend %card-title-sm;
+}
+.#{$class-prefix}card-title-top-sm {
+    @extend %card-title-top-sm;
+}
+.#{$class-prefix}card-title-top-lg {
+    @extend %card-title-top-lg;
+}
+.#{$class-prefix}card-title-top-xl {
+    @extend %card-title-top-xl;
+}
+.#{$class-prefix}card-text {
+    @extend %card-text;
+}
+.#{$class-prefix}card-text-sm {
+    @extend %card-text-sm;
+}
+.#{$class-prefix}card-text-gray {
+    @extend %card-text-gray;
+}
+.#{$class-prefix}card-text-xxl {
+    @extend %card-text-xxl;
+}
+.#{$class-prefix}card-desc {
+    @extend %card-desc;
+}
+.#{$class-prefix}card-desc-xs {
+    @extend %card-desc-xs;
+}
+.#{$class-prefix}card-desc-top-sm {
+    @extend %card-desc-top-sm;
+}
+
+.#{$class-prefix}card-sub-title {
+    @extend %card-sub-title;
+}
+.#{$class-prefix}card-sub-title-xs {
+    @extend %card-sub-title-xs;
+}
+.#{$class-prefix}card-hover {
+    @extend %card-hover;
+}
+//===== Card size ===================================
+.#{$class-prefix}card-xs {
+    @extend %card-xs;
+}
+.#{$class-prefix}card-sm {
+    @extend %card-sm;
+}
+.#{$class-prefix}card-xl {
+    @extend %card-xl;
+}
+.#{$class-prefix}card-md {
+    @extend %card-md;
+}
+.#{$class-prefix}card-lg {
+    @extend %card-lg;
+}
+.#{$class-prefix}card-xxl {
+    @extend %card-xxl;
+}
+//----- Card color -----------------------------------
+
+@each $color, $value in $theme-colors {
+    %card-#{$color},
+    .#{$class-prefix}card-#{$color} {
+        @include card-variant($color);
+        @if $color == "gray" {
+            --#{$var-prefix}card-bg: var(--#{$var-prefix}gray-300);
+        }
+    }
+
+    %card-outline-#{$color},
+    .#{$class-prefix}card-outline-#{$color} {
+        @include card-outline-variant($color);
+        @if $color == "gray" {
+            --#{$var-prefix}card-border-color: var(--#{$var-prefix}gray-200);
+        }
+    }
+
+    %card-ghost-#{$color},
+    .#{$class-prefix}card-ghost-#{$color} {
+        @include card-ghost-variant($color);
+    }
+
+    %card-light-#{$color},
+    .#{$class-prefix}card-light-#{$color} {
+        @include card-light-variant($color);
+    }
+}
