@@ -1,0 +1,51 @@
+.register {
+    &-close {
+        @include position(absolute, 14px, 22px);
+    }
+}
+.kv-form-register {
+    width: 100%;
+    max-width: 469px;
+    margin: 0 auto;
+}
+.kv-brand {
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    right: 4px;
+    top: 4px;
+    z-index: $zindex-top;
+}
+.kv-control-padding {
+    padding-right: 12rem;
+}
+.kv-hide-password {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: $zindex-top;
+}
+.kv-control-password {
+    padding-right: 4rem;
+}
+.kv-form-text {
+    white-space: nowrap;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+.kv-form-margin {
+    margin-right: 1.6rem;
+}
+.kv-form-center {
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.kv-form-size {
+    width: 236px;
+}
+.register-cta {
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 8px;
+}

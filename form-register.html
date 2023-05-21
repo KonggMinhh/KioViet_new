@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KiotViet</title>
+        <!-- Link icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css"
+        />
+        <!-- Css styles -->
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+    <body>
+        <div class="kv-h100 kv-d-flex">
+            <div class="kv-media kv-card-overlay kv-position-relative">
+                <img
+                    class="kv-card-img"
+                    src="./assets/img/register-02.png"
+                    alt="register"
+                />
+                <section class="kv-card-overlay-info kv-text-center">
+                    <p>
+                        Quản lý dễ dàng<br />
+                        Bán hàng đơn giản
+                    </p>
+                    <span class="kv-card-overlay-desc"
+                        >Hỗ trợ đăng ký 1800 6162</span
+                    >
+                </section>
+            </div>
+            <section class="kv-content">
+                <section class="kv-text-center kv-position-relative">
+                    <h3>Bar -Cafe & Nhà hàng, Karaoket</h3>
+                    <p class="kv-margin-lg kv-font-xs kv-color-primary">
+                        Chọn ngành hàng khác
+                    </p>
+                    <a href="./index.html" onclick="window.close()">
+                        <i
+                            class="fa-solid fa-xmark fa-lg register-close kv-color-black"
+                        ></i>
+                    </a>
+                </section>
+                <div class="kv-form-register">
+                    <form action="" method="POST" autocomplete="off">
+                        <!-- Ho Ten -->
+                        <div class="kv-form-row kv-d-block">
+                            <div class="kv-form-group">
+                                <label class="kv-form-text" for="first-name"
+                                    >Họ tên</label
+                                >
+                                <input
+                                    class="kv-form-control kv-form-control-lg"
+                                    type="text"
+                                    name="first-name"
+                                    id="first-name"
+                                    placeholder="Họ tên"
+                                    required
+                                    minlength="2"
+                                />
+                            </div>
+                        </div>
+                        <!-- Dien thoai + Email -->
+                        <div class="kv-form-row">
+                            <div class="kv-form-group kv-form-margin">
+                                <label class="kv-form-text" for="phone"
+                                    >Điện thoại</label
+                                >
+                                <input
+                                    class="kv-form-control kv-form-control-lg "
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="0912555696"
+                                    required
+                                    pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
+                                />
+                            </div>
+
+                            <div class="kv-form-group">
+                                <label class="kv-form-text" for="email"
+                                    >Email</label
+                                >
+                                <input class="kv-form-control
+                                kv-form-control-lg" type="email" name="email"
+                                id="email" placeholder="minhvu@kiotviet.com"
+                                required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$""
+                                />
+                            </div>
+                        </div>
+                        <!-- Dia chi -->
+                        <div class="kv-form-row kv-d-block">
+                            <div class="kv-form-group">
+                                <label class="kv-form-text" for="address"
+                                    >Địa chỉ</label
+                                >
+                                <input
+                                    class="kv-form-control kv-form-control-lg"
+                                    type="text"
+                                    name="address"
+                                    id="address"
+                                    placeholder="Tỉnh/Thành phố - Quận/Huyện"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <!-- Ten gian hang -->
+                        <div class="kv-form-row kv-d-block">
+                            <div class="kv-form-group">
+                                <label class="kv-form-text" for="name-stall"
+                                    >Tên gian hàng</label
+                                >
+                                <div
+                                    class="kv-input-group kv-position-relative"
+                                >
+                                    <input
+                                        class="kv-form-control kv-form-control-lg kv-control-padding"
+                                        type="text"
+                                        name="name-stall"
+                                        id="name-stall"
+                                        placeholder="Đặt tên cho gian hàng của bạn"
+                                        required
+                                        minlength="10"
+                                    />
+                                    <div
+                                        class="kv-form-control-suffix kv-position-absolute kv-bg-light-primary-50 kv-brand"
+                                    >
+                                        <span class="kv-color-primary"
+                                            >.kiotviet.vn</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dang nhap  + Password -->
+                        <div class="kv-form-row">
+                            <div class="kv-form-group kv-form-margin">
+                                <label class="kv-form-text" for="id"
+                                    >Tên đăng nhập</label
+                                >
+                                <input
+                                    class="kv-form-control kv-form-control-lg "
+                                    type="text"
+                                    name="id"
+                                    id="id"
+                                    placeholder="Tên đăng nhập"
+                                    pattern="^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$"
+                                />
+                            </div>
+
+                            <div class="kv-form-group">
+                                <label class="kv-form-text" for="password"
+                                    >Mật khẩu</label
+                                >
+                                <div
+                                    class="kv-input-group kv-position-relative"
+                                >
+                                    <input
+                                        class="kv-form-control kv-form-control-lg kv-control-password"
+                                        type="password"
+                                        name="password"
+                                        id="password"
+                                        placeholder="Mật khẩu"
+                                        required
+                                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                                    />
+                                    <i
+                                        id="togglePassword"
+                                        class="fa-regular fa-eye-slash kv-hide-password toggle-password"
+                                    ></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Captcha -->
+                        <div class="kv-form-row kv-form-center">
+                            <span class="kv-form-text kv-color-gray">Mã xác thực</span>
+                            <img src="./assets/img/register-03.png" alt="Captcha" />
+                            <span
+                                class="icon-circle icon-circle-sm icon-circle-primary"
+                            >
+                                <i
+                                    class="fa-regular fa-arrows-rotate kv-color-primary"
+                                ></i>
+                            </span>
+                            <input
+                                class="kv-form-control kv-form-control-lg kv-form-size"
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Nhập mã xác thực"
+                            />
+                        </div>
+                    </form>
+                    <div class="register-cta">
+                        <a
+                            href="./register.html"
+                            class="kv-btn kv-btn-xxl kv-btn-outline-primary kv-bg-light-primary-50 kv-btn-circle"
+                            >Quay lại</a
+                        >
+                        <button
+                            type="submit"
+                            class="kv-btn kv-btn-xxl kv-btn-primary kv-btn-circle"
+                        >
+                            Dùng thử miễn phí
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            const togglePassword = document.querySelector("#togglePassword");
+            const password = document.querySelector("#password");
+
+            togglePassword.addEventListener("click", function () {
+                // toggle the type attribute
+                const type =
+                    password.getAttribute("type") === "password"
+                        ? "text"
+                        : "password";
+                password.setAttribute("type", type);
+
+                // toggle the icon
+                this.classList.toggle("fa-eye");
+            });
+
+            // prevent form submit
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+            });
+        </script>
+    </body>
+</html>

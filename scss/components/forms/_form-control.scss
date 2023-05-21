@@ -8,7 +8,7 @@
     --#{$var-prefix}input-line-height: #{$input-line-height};
     --#{$var-prefix}input-font-weight: var(--#{$var-prefix}font-weight-regular);
     --#{$var-prefix}input-color: #{$input-color};
-    --#{$var-prefix}input-bg: transparent;
+    --#{$var-prefix}input-bg: #{$input-bg};
     --#{$var-prefix}input-border-width: #{$input-border-width};
     --#{$var-prefix}input-border-color: #{$input-border-color};
     --#{$var-prefix}input-hover-border-color: #{$input-focus-border-color};

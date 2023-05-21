@@ -42,3 +42,25 @@
 .kv-margin-xxl {
     margin-bottom: 5.6rem !important;
 }
+.kv-margin-lg {
+    margin-bottom: 2.4rem !important;
+}
+.kv-margin-sm {
+    margin-bottom: 1.8rem !important;
+}
+
+.kv-media {
+    width: 46% !important;
+}
+.kv-content {
+    padding: 2.6rem 0;
+    flex: 1;
+    background: linear-gradient(
+        24.91deg,
+        #eff6ff 18.37%,
+        #ffffff 86.66%
+    ) !important;
+}
+.kv-h100 {
+    height: 100vh !important;
+}

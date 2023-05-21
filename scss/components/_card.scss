@@ -281,6 +281,67 @@
         box-shadow: var(--#{$var-prefix}card-box-shadow);
     }
 }
+%card-overlay::before {
+    content: "";
+    @include position(absolute, 0, 0, 0, 0);
+    background: #002957;
+    opacity: 0.8;
+}
+%card-overlay-info {
+    --#{$var-prefix}card-font-weight: #{$card-font-weight-bold};
+    --#{$var-prefix}card-font-size: #{$card-font-size-overlay};
+    --#{$var-prefix}card-color: #{$card-overlay-color};
+    --#{$var-prefix}card-line-height: #{$card-line-height-overlay};
+
+    font-weight: var(--#{$var-prefix}card-font-weight);
+    font-size: var(--#{$var-prefix}card-font-size);
+    color: var(--#{$var-prefix}card-color);
+    line-height: var(--#{$var-prefix}card-line-height);
+    @extend %center-all;
+}
+%card-overlay-desc {
+    --#{$var-prefix}card-padding-x: #{$card-padding-x-overlay};
+    --#{$var-prefix}card-padding-y: #{$card-padding-y-overlay};
+    --#{$var-prefix}card-font-weight: #{$card-font-weight-semibold};
+    --#{$var-prefix}card-font-size: #{$card-font-size-xs};
+    --#{$var-prefix}card-line-height: #{$card-line-height};
+    
+    @include position(relative);
+    padding: var(--#{$var-prefix}card-padding-y)
+    var(--#{$var-prefix}card-padding-x);
+    font-weight: var(--#{$var-prefix}card-font-weight);
+    font-size: var(--#{$var-prefix}card-font-size);
+    color: var(--#{$var-prefix}card-color);
+    line-height: var(--#{$var-prefix}card-line-height);
+    &::before {
+        @include position(absolute,0,n,n,0);
+        content: "";
+        display: inline-block;
+        border-width: 1.6px 0 0 1.6px;
+        width: 1rem;
+        height: 1rem;
+        border-style: solid;
+        border-color: $white;
+    }
+    &::after {
+        @include position(absolute,n,0,0,n);
+        content: "";
+        display: inline-block;
+        border-width: 0 1.6px 1.6px 0;
+        width: 1rem;
+        height: 1rem;
+        border-style: solid;
+        border-color: $white;
+    }
+}
+
+%card-toast {
+    --#{$var-prefix}card-padding-x: #{$card-padding-x-toast};
+    --#{$var-prefix}card-padding-y: #{$card-padding-y-toast};
+}
+%card-toast-circle {
+    --#{$var-prefix}card-border-radius: #{$card-border-radius-md};
+}
 //===== Card Class ===================================
 .#{$class-prefix}card {
     @extend %card;
@@ -369,7 +430,6 @@
 .#{$class-prefix}card-desc-top-sm {
     @extend %card-desc-top-sm;
 }
-
 .#{$class-prefix}card-sub-title {
     @extend %card-sub-title;
 }
@@ -378,6 +438,21 @@
 }
 .#{$class-prefix}card-hover {
     @extend %card-hover;
+}
+.#{$class-prefix}card-overlay {
+    @extend %card-overlay;
+}
+.#{$class-prefix}card-overlay-info {
+    @extend %card-overlay-info;
+}
+.#{$class-prefix}card-overlay-desc {
+    @extend %card-overlay-desc;
+}
+.#{$class-prefix}card-toast {
+    @extend %card-toast;
+}
+.#{$class-prefix}card-toast-circle {
+    @extend %card-toast-circle;
 }
 //===== Card size ===================================
 .#{$class-prefix}card-xs {

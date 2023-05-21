@@ -1,6 +1,5 @@
 //===== toasts Virtual Class ==========================
-%toast { 
-
+%toast {
     --#{$var-prefix}toast-padding-x: #{$toast-padding-x};
     --#{$var-prefix}toast-padding-y: #{$toast-padding-y};
     --#{$var-prefix}toast-spacing: #{$toast-spacing};
@@ -14,7 +13,9 @@
     --#{$var-prefix}toast-header-color: #{$toast-header-color};
     --#{$var-prefix}toast-header-bg: #{$toast-header-background-color};
     --#{$var-prefix}toast-header-border-color: #{$toast-header-border-color};
-  
+
+    padding: var(--#{$var-prefix}toast-padding-y)
+        var(--#{$var-prefix}toast-padding-x);
     width: var(--#{$var-prefix}toast-max-width);
     max-width: 100%;
     font-size: var(--#{$var-prefix}toast-font-size);
@@ -22,23 +23,40 @@
     pointer-events: auto;
     background-color: var(--#{$var-prefix}toast-bg);
     background-clip: padding-box;
-    border: var(--#{$var-prefix}toast-border-width) solid var(--#{$var-prefix}toast-border-color);
+    border: var(--#{$var-prefix}toast-border-width) solid
+        var(--#{$var-prefix}toast-border-color);
     box-shadow: #{$toast-box-shadow-property} rgba(var(--#{$var-prefix}black-rgb), #{$toast-box-shadow-opacity});
     @include border-radius(var(--#{$var-prefix}toast-border-radius));
-  }
-  
+}
+
 //===== toast Class ===================================
 .#{$class-prefix}toast {
     @extend %toast;
     &.showing {
         opacity: 0;
-      }
-    
-      &:not(.show) {
+    }
+
+    &:not(.show) {
         display: none;
-      }    
+    }
+}
+.#{$class-prefix}toast-overlay {
+    @include position(fixed, 0, 0, 0, 0);
+    @extend %flex-center;
+    background: rgba(0, 34, 74, 0.8);
+    z-index: $zindex-middle;
+    &:not(.show) {
+        display: none;
+    }
 }
 
+.#{$class-prefix}toast-desc {
+    font-size: 1.2rem;
+    @include line-clamp(1);
+}
+.toast-close {
+    @include position(absolute, 10px, 20px);
+}
 //-----toasts colors ----------------------------------
 @each $color, $value in $theme-colors {
     .#{$class-prefix}toast-#{$color} {

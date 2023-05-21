@@ -42,7 +42,7 @@
 @import "components/nav";
 @import "components/navbar";
 @import "components/card";
-// @import "components/dropdown";
+@import "components/dropdown";
 // @import "libraries/kendo-ui";
 @import "components/popups";
 // @import "components/pagination";
@@ -50,6 +50,7 @@
 @import "components/hero";
 
 //----- 6.Pages -----------------------------------
+@import "pages/register";
 
 //----- 7.Others ----------------------------------
 @import "others/demo";

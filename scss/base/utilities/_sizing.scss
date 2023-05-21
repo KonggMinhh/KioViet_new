@@ -7,7 +7,7 @@
             .min-#{$abbrev}-#{$size} { min-#{$prop}: unitless($length) !important; } 
         }        
         @else if $size != "auto" {
-            $viewport: #{v + $abbrev};
+            $viewport: #{v+$abbrev};
             %min-#{$viewport}-#{$size},
             .min-#{$viewport}-#{$size} { min-#{$prop}: unitless($length) * 1#{$viewport} !important; }
             %#{$viewport}-#{$size},

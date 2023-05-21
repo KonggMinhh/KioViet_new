@@ -279,7 +279,7 @@ $box-sizes: (
 
 //----- Icons size --------------------------------------------
 $icon-size-xs: 1.2rem; // var(--#{$var-prefix}icon-size-xs);
-$icon-size-sm: 1.4rem;
+$icon-size-sm: 4rem;
 $icon-size-md: 4.4rem;
 $icon-size-lg: 5.8rem;
 $icon-size-xl: 6rem;
@@ -342,9 +342,11 @@ $scrollbar-thumb-bg: var(--#{$var-prefix}gray-300);
 $border-width: 0.1rem;
 
 //----- Form row ----------------------------------------------
-$form-row-margin-bottom: 1rem;
+$form-row-margin-bottom: 1.2rem;
 
 //----- Input text + Btn --------------------------------------
+$input-bg:var(--#{$var-prefix}white);
+
 $input-font-size: $font-size;
 $input-border-radius-sm: var(--#{$var-prefix}radius-sm);
 $input-border-radius: var(--#{$var-prefix}radius-md);
@@ -452,12 +454,12 @@ $form-number-padding-x: calc(
 );
 
 //----- Dropdown -------------------------------------------
-$dropdown-padding-x: 0.8rem;
-$dropdown-padding-y: 0.8rem;
+$dropdown-padding-x: 3.2rem;
+$dropdown-padding-y: 3.2rem;
 $dropdown-border-radius: var(--#{$var-prefix}radius-xl);
 $dropdown-border-width: 0.1rem;
 $dropdown-border-color: var(--#{$var-prefix}gray-50);
-$dropdown-box-shadow-property: 0 8px 20px 0;
+$dropdown-box-shadow-property: 0px 40px 60px;
 $dropdown-box-shadow-opacity: 0.25;
 
 $dropdown-item-padding-x: 0.8rem;
@@ -549,8 +551,8 @@ $tag-border-radius: var(--#{$var-prefix}radius-lg);
 
 //===== Divider ============================================
 $divider-spacing: 2.5rem;
-$divider-margin: 1rem;
-$divider-border-size: $border-width;
+$divider-margin: 1.6rem;
+$divider-border-size: $border-width * 2;
 $divider-border-style: solid;
 $divider-border-color: var(--#{$var-prefix}gray-100);
 
@@ -662,14 +664,14 @@ $alert-border-radius: var(--#{$var-prefix}radius-lg);
 $alert-border-radius-lg: var(--#{$var-prefix}radius-lg);
 
 //===== Toast =============================================
-$toast-max-width: 35rem;
-$toast-padding-x: 1.6rem;
-$toast-padding-y: 1.6rem;
+$toast-max-width: 45rem;
+$toast-padding-x: 3.2em;
+$toast-padding-y: 3.2rem;
 $toast-font-size: $font-size-sm;
 $toast-color: null;
-$toast-background-color: rgba(var(--#{$var-prefix}white-rgb), 0.85);
+$toast-background-color: var(--#{$var-prefix}white);
 $toast-border-width: $border-width;
-$toast-border-color: $input-border-color;
+$toast-border-color: var(--#{$var-prefix}white-rgb);
 $toast-border-radius: var(--#{$var-prefix}radius-md);
 $toast-box-shadow-property: 0 1px 2px 0;
 $toast-box-shadow-opacity: 0.15;
@@ -748,13 +750,16 @@ $nav-link-disabled-color: var(--#{$var-prefix}gray-400);
 $card-font-size-xs: $font-size-xs;
 $card-font-size-sm: $font-size-sm;
 $card-font-size: $font-size;
-$card-font-size-md:$font-size-xs;
+$card-font-size-md: $font-size-xs;
 $card-font-size-lg: $font-size-lg;
 $card-font-size-xl: $font-size-xl;
 $card-font-size-xxl: $font-size-lg;
 
+$card-font-size-overlay: 4rem;
+
 $card-font-weight: var(--#{$var-prefix}font-weight-regular);
 $card-font-weight-semibold: var(--#{$var-prefix}font-weight-semibold);
+$card-font-weight-bold: var(--#{$var-prefix}font-weight-bold);
 
 $card-line-height-xs: $line-height-xs;
 $card-line-height-sm: $line-height-sm;
@@ -764,12 +769,15 @@ $card-line-height-lg: $line-height;
 $card-line-height-xl: $line-height-lg;
 $card-line-height-xxl: $line-height-lg;
 
+$card-line-height-overlay: 4.8rem;
+
 $card-box-shadow-property: 0px 4px 40px;
 $card-box-shadow-opacity: 0.08;
 
 $card-hover-bg: var(--#{$var-prefix}white);
 $card-bg: transparent;
 $card-color: var(--#{$var-prefix}body-color);
+$card-overlay-color: var(--#{$var-prefix}white);
 
 $card-border-radius-none: initial;
 $card-border-radius: var(--#{$var-prefix}radius-xl);
@@ -791,6 +799,12 @@ $card-padding-x-xl: 2.4rem;
 $card-padding-y-xl: 3.2rem;
 $card-padding-x-xxl: 3.2rem;
 $card-padding-y-xxl: 4rem;
+
+$card-padding-x-overlay: 1.4rem;
+$card-padding-y-overlay: 0.4rem;
+
+$card-padding-x-toast: 1.6rem;
+$card-padding-y-toast: 1.6rem;
 
 $card-margin-x: 0;
 $card-margin-y: 0;
