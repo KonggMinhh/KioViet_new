@@ -231,6 +231,9 @@
 %card-text-gray {
     --#{$var-prefix}card-color: var(--#{$var-prefix}gray-600);
 }
+%card-text-xs {
+    margin-top: #{$card-margin-y-sm};
+}
 %card-text-sm {
     margin-top: #{$card-margin-y-sm};
     margin-bottom: #{$card-margin-y-sm};

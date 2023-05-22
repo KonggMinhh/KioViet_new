@@ -9,18 +9,9 @@
         content: "";
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
+        inset: 0;
         background: rgba(14, 50, 82, 0.88);
         z-index: 0;
-    }
-    & .nav-link {
-        color: var(--#{$var-prefix}white);
-        font-weight: var(--#{$var-prefix}font-weight-regular);
-        &:hover {
-            color: #237fcd;
-        }
     }
     &-copyright {
         background: rgba(0, 0, 0, 0.2);
@@ -31,7 +22,6 @@
     &__year {
         font-weight: 600;
         font-size: 1.3rem;
-        color: rgba(234, 234, 234, 0.6);
         margin-right: 28px;
     }
     &__times {
@@ -47,13 +37,11 @@
         margin-left: 28px;
     }
     &-social {
+        column-gap: 15px;
         display: flex;
         align-items: center;
         margin-left: auto;
     }
-}
-.nav-link-phone {
-    font-size: 2.2rem;
 }
 
 // Mobile
@@ -88,6 +76,4 @@
         background-attachment: fixed;
     }
 }
-.position-relative {
-    position: relative;
-}
+

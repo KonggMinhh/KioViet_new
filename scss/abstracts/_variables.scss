@@ -60,7 +60,7 @@ $disabled-color: var(--#{$var-prefix}gray-200);
 $body-bg: var(--#{$var-prefix}white);
 $icon-action-color: var(--#{$var-prefix}gray);
 $icon-mask-color: var(--#{$var-prefix}gray-400);
-$link-color: #0000ff;
+$link-color: #00a3ff;
 
 //===== Options =========================================
 $enable-grid-classes: true;
@@ -76,6 +76,7 @@ $spacer-md: $spacer * 2; //0.8rem
 $spacer-lg: $spacer * 4; //1.6rem
 $spacer-xl: $spacer * 6; //2.4rem
 $spacer-xxl: $spacer * 10; //4rem
+$spacer-3xl: $spacer * 13; //5rem
 
 $spacers: (
     "none": 0,
@@ -85,6 +86,7 @@ $spacers: (
     "lg": $spacer-lg,
     "xl": $spacer-xl,
     "xxl": $spacer-xxl,
+    "3xl": $spacer-3xl,
 );
 
 $escaped-characters: (
@@ -304,6 +306,7 @@ $margin-sizes: (
 $bg-icon: transparent;
 
 $icon-radius: 99rem;
+$icon-radius-sm: 1.2rem;
 
 //----- Radius ------------------------------------------------
 $border-radius-sm: 0.6rem; // var(--#{$var-prefix}radius-sm);
@@ -345,7 +348,7 @@ $border-width: 0.1rem;
 $form-row-margin-bottom: 1.2rem;
 
 //----- Input text + Btn --------------------------------------
-$input-bg:var(--#{$var-prefix}white);
+$input-bg: var(--#{$var-prefix}white);
 
 $input-font-size: $font-size;
 $input-border-radius-sm: var(--#{$var-prefix}radius-sm);
@@ -718,33 +721,36 @@ $gutters: $spacers;
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
 
-$nav-link-padding-y: 0;
-
-$navbar-light-color: var(--#{$var-prefix}body-color);
-$nav-link-hover-color: var(--#{$var-prefix}link-hover-color);
-$navbar-light-hover-color: var(--#{$var-prefix}green);
-$nav-link-font-size: var(--#{$var-prefix}font-size-md);
-$nav-link-font-weight: var(--#{$var-prefix}font-weight-semibold);
-$nav-link-color: var(--#{$var-prefix}body-color);
-$nav-link-hover-color: var(--#{$var-prefix}link-hover-color);
-$nav-link-transition: color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-$nav-link-disabled-color: var(--#{$var-prefix}gray-400);
-
-$navbar-nav-link-padding-y: 0.6rem;
+$navbar-nav-link-padding-y: 0.8rem;
 $navbar-nav-link-padding-x: 1.6rem;
+$navbar-nav-link-font-size: var(--#{$var-prefix}font-xs);
+$navbar-link-font-weight: var(--#{$var-prefix}font-weight-semibold);
+$navbar-link-color: var(--#{$var-prefix}body-color);
+$navbar-nav-link-hover-color: var(--#{$var-prefix}body-color);
+$navbar-nav-link-bg-color: var(--#{$var-prefix}white);
+$navbar-nav-link-border-radius: var(--#{$var-prefix}radius-circle);
+$navbar-nav-link-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+$navbar-nav-shadow-property: 0px 4px 40px;
+$navbar-nav-shadow-opacity: 0.08;
+
+
 
 // Nav footer
-$nav-link-padding-y: 0.8rem;
-$nav-link-padding-x: 1.6rem;
-$nav-link-font-size: var(--#{$var-prefix}font-size-md);
-$nav-link-font-size: var(--#{$var-prefix}font-size-md);
+$nav-link-padding-y: 0.6rem;
+$nav-link-padding-x: 0;
+$nav-link-margin-x: 0;
+$nav-link-margin-y: 0;
+$nav-link-margin-y-sm: 1.2rem;
+
+$nav-link-font-size: var(--#{$var-prefix}font-xs-md);
 $nav-link-font-weight: var(--#{$var-prefix}font-weight-semibold);
 $nav-link-color: var(--#{$var-prefix}body-color);
-$nav-link-hover-color: var(--#{$var-prefix}link-hover-color);
+$nav-link-hover-color: $link-color;
 $nav-link-transition: color 0.15s ease-in-out,
     background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-$nav-link-disabled-color: var(--#{$var-prefix}gray-400);
+// $nav-link-disabled-color: var(--#{$var-prefix}gray-400);
 
 //======== Card ============
 $card-font-size-xs: $font-size-xs;
@@ -840,7 +846,7 @@ $card-img-height-md: 94px;
 
 // $card-img-width-lg: 384px;
 $card-img-width-lg: 100%;
-$card-img-height-lg: 202px;
+$card-img-height-lg: 205px;
 
 $card-img-width-xl: 340px;
 $card-img-height-xl: 246px;

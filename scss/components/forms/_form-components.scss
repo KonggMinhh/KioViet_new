@@ -95,7 +95,9 @@
     @include border-radius(var(--#{$var-prefix}icon-radius));
     @include box-size(var(--#{$var-prefix}icon-size));
 }
-
+.icon-circle-radius-sm {
+    --#{$var-prefix}icon-radius: #{$icon-radius-sm};
+}
 .icon-circle {
     @extend %icon-circle;
     @each $size, $value in $icon-sizes {

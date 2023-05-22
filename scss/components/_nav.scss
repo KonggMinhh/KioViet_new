@@ -2,11 +2,12 @@
     // scss-docs-start nav-css-vars
     --#{$var-prefix}nav-link-padding-x: #{$nav-link-padding-x};
     --#{$var-prefix}nav-link-padding-y: #{$nav-link-padding-y};
+    --#{$var-prefix}nav-link-margin-x: #{$nav-link-margin-x};
+    --#{$var-prefix}nav-link-margin-y: #{$nav-link-margin-y};
     --#{$var-prefix}nav-link-font-size: #{$nav-link-font-size};
     --#{$var-prefix}nav-link-font-weight: #{$nav-link-font-weight};
     --#{$var-prefix}nav-link-color: #{$nav-link-color};
     --#{$var-prefix}nav-link-hover-color: #{$nav-link-hover-color};
-    --#{$var-prefix}nav-link-disabled-color: #{$nav-link-disabled-color};
     // scss-docs-end nav-css-vars
 
     display: flex;
@@ -14,33 +15,52 @@
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-}
-
-// Nav-link
-.nav-link {
-    display: block;
-    padding: var(--#{$var-prefix}nav-link-padding-y)
-        var(--#{$var-prefix}nav-link-padding-x);
-    font-size: var(--#{$var-prefix}nav-link-font-size);
-    font-weight: var(--#{$var-prefix}nav-link-font-weight);
-    color: var(--#{$var-prefix}nav-link-color);
-    text-decoration: if($link-decoration == none, null, none);
-    background: none;
-    border: 0;
-    @include transition($nav-link-transition);
-
-    &:hover,
-    &:focus {
-        color: var(--#{$var-prefix}nav-link-hover-color);
-        text-decoration: if($link-hover-decoration == underline, none, null);
+    // Nav-item
+    .nav-item {
+        display: flex;
+        align-items: center;
     }
-    &:focus-visible {
-        outline: 0;
+    .nav-item-sm {
+    --#{$var-prefix}nav-link-margin-y: #{$nav-link-margin-y-sm};
+        margin-bottom: var(--#{$var-prefix}nav-link-margin-y);
     }
-    // Disabled state lightens text
-    &.disabled {
-        color: var(--#{$var-prefix}nav-link-disabled-color);
-        pointer-events: none;
-        cursor: default;
+    // Nav-link
+    .nav-link {
+        display: inline-block;
+        padding: var(--#{$var-prefix}nav-link-padding-y)
+            var(--#{$var-prefix}nav-link-padding-x);
+        font-size: var(--#{$var-prefix}nav-link-font-size);
+        font-weight: var(--#{$var-prefix}nav-link-font-weight);
+        color: var(--#{$var-prefix}nav-link-color);
+        text-decoration: if($link-decoration == none, null, none);
+        white-space: nowrap;
+        background: none;
+        border: 0;
+        @include transition($nav-link-transition);
+
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            background-color: transparent;
+            color: var(--#{$var-prefix}nav-link-hover-color);
+            text-decoration: if(
+                $link-hover-decoration == underline,
+                none,
+                null
+            );
+        }
+        &:focus-visible {
+            outline: 0;
+        }
+        // Disabled state lightens text
+        &.disabled {
+            color: var(--#{$var-prefix}nav-link-disabled-color);
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+    .nav-link-xs {
+        color: var(--#{$var-prefix}white);
+        font-weight: var(--#{$var-prefix}font-weight-regular);
     }
 }

@@ -18,3 +18,29 @@
         margin-left: auto;
     }
 }
+.kv-list-product,
+.kv-list-solution {
+    display: none;
+    position: absolute;
+    top: 120%;
+    transform: translateX(-12%);
+    &::before {
+        content: "";
+        position: absolute;
+        left: 150px;
+        top: -30px;
+        border: 18px solid $white;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        display: inline-block;
+    }
+}
+.kv-list-solution{ 
+    display: none;
+    transform: translateX(-29%);
+    &::before {
+        top: -30px;
+        left: 396px;
+    }
+}
