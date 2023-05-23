@@ -59,6 +59,7 @@
                                     placeholder="Họ tên"
                                     required
                                     minlength="2"
+                                    autofocus
                                 />
                             </div>
                         </div>
@@ -69,25 +70,29 @@
                                     >Điện thoại</label
                                 >
                                 <input
-                                    class="kv-form-control kv-form-control-lg "
+                                    class="kv-form-control kv-form-control-lg"
                                     type="tel"
                                     name="phone"
                                     id="phone"
                                     placeholder="0912555696"
+                                    autocomplete="off"
                                     required
                                     pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
                                 />
                             </div>
-
                             <div class="kv-form-group">
                                 <label class="kv-form-text" for="email"
                                     >Email</label
                                 >
-                                <input class="kv-form-control
-                                kv-form-control-lg" type="email" name="email"
-                                id="email" placeholder="minhvu@kiotviet.com"
-                                required
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$""
+                                <input
+                                    class="kv-form-control kv-form-control-lg"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="minhvu@kiotviet.com"
+                                    required
+                                    autocomplete="off"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                                 />
                             </div>
                         </div>
@@ -104,6 +109,7 @@
                                     id="address"
                                     placeholder="Tỉnh/Thành phố - Quận/Huyện"
                                     required
+                                    autocomplete="off"
                                 />
                             </div>
                         </div>
@@ -142,7 +148,7 @@
                                     >Tên đăng nhập</label
                                 >
                                 <input
-                                    class="kv-form-control kv-form-control-lg "
+                                    class="kv-form-control kv-form-control-lg"
                                     type="text"
                                     name="id"
                                     id="id"
@@ -150,7 +156,6 @@
                                     pattern="^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$"
                                 />
                             </div>
-
                             <div class="kv-form-group">
                                 <label class="kv-form-text" for="password"
                                     >Mật khẩu</label
@@ -176,8 +181,13 @@
                         </div>
                         <!-- Captcha -->
                         <div class="kv-form-row kv-form-center">
-                            <span class="kv-form-text kv-color-gray">Mã xác thực</span>
-                            <img src="./assets/img/register-03.png" alt="Captcha" />
+                            <span class="kv-form-text kv-color-gray"
+                                >Mã xác thực</span
+                            >
+                            <img
+                                src="./assets/img/register-03.png"
+                                alt="Captcha"
+                            />
                             <span
                                 class="icon-circle icon-circle-sm icon-circle-primary"
                             >

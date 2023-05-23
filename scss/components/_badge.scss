@@ -137,30 +137,17 @@
 }
 
 .badge-right {
-    @include media-breakpoint-up(xxl) {
-        right: 56px;
-        top: 50%;
-    }
+    right: 56px;
+    top: 50%;
 }
 .badge-bottom {
-    @include media-breakpoint-between(xxl, 3xl) {
-        bottom: 92px;
-        left: 50%;
-    }
-    @include media-breakpoint-between(3xl, 4xl) {
-        bottom: 92px;
-        left: 65%;
-    }
+    bottom: 92px;
+    left: 68px;
+
 }
 .badge-top {
-    @include media-breakpoint-between(xxl, 3xl) {
-        bottom: 62.5%;
-        left: 46%;
-    }
-    @include media-breakpoint-between(3xl, 4xl) {
-        bottom: 390px;
-        left: 46%;
-    }
+    bottom: 62.5%;
+    left: 0;
 }
 //----- Badges Sizes ------------------------------
 .#{$class-prefix}badge-sm {

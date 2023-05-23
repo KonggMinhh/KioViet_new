@@ -1,4 +1,5 @@
 .header {
+    background: linear-gradient(90deg, rgba(242,248,254,1) 90%, rgba(232,255,219,1) 100%);
     &-inner {
         position: relative;
         display: flex;
@@ -24,6 +25,7 @@
     position: absolute;
     top: 120%;
     transform: translateX(-12%);
+    z-index: $zindex-top;
     &::before {
         content: "";
         position: absolute;
@@ -36,11 +38,80 @@
         display: inline-block;
     }
 }
-.kv-list-solution{ 
+.kv-list-solution {
     display: none;
     transform: translateX(-29%);
     &::before {
         top: -30px;
         left: 396px;
     }
+}
+// Banner
+.hero {
+    height: calc(100vh - 6.7rem);
+    background: linear-gradient(90deg, rgba(242,248,254,1) 80%, rgba(232,255,219,1) 100%);
+    &-media {
+        position: relative;
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-decor-small {
+        position: absolute;
+        left: 56px;
+    }
+    &-decor-large {
+        position: absolute;
+        left: 127px;
+        top: 70px;
+    }
+    &-heading {
+        font-size: 5.6rem;
+        line-height: 6.5rem;
+        letter-spacing: 0.01em;
+        @include media-breakpoint-down(sm) {
+            & {
+                font-size: 3.5rem;
+                line-height: 4.3rem;
+            }
+        }
+    }
+    &-cta {
+        margin-top: 4.9rem;
+        display: flex;
+        column-gap: 1.6rem;
+    }
+    &-users {
+        margin-top: 4.3rem;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 2.8rem;
+    }
+    &-user-wrapper {
+        display: flex;
+        column-gap: 1.2rem;
+    }
+    &-user-text {
+        font-size: 1.3rem;
+    }
+    &-quanlity {
+        font-size: $font-size-h2;
+    }
+    &-img {
+        max-width: 100%;
+    }
+}
+.badge-label-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background: #e0eefe;
+    border-radius: 50px;
+}
+.badge-img {
+    max-height: 3.2rem;
 }
